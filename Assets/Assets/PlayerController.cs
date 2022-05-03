@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public GameObject startNode;
     public Vector2 startPosition;
     public GameManager gameManager;
+
+    public bool isDead = false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,27 +21,40 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         movmentController = GetComponent<MovementController>();
-   
         startNode = movmentController.currentNode;
      
     }
+   
 
     public void setup()
     {
+        isDead = false;
+        animator.SetBool("dead", false);
+        animator.SetBool("moving", false);
         movmentController.currentNode = startNode;
         movmentController.lastMovingDirection = "left";
         transform.position = startPosition;
-        animator.SetBool("moving", false);
+        sprite.flipX = false;
+        movmentController.direction = "left";
+        animator.speed = 1;
     }
-
+    public void Stop()
+    {
+        animator.speed = 0;
+    }
     // Update is called once per frame
     void Update()
     {
         if(!gameManager.GameIsRunning)
         {
+            if (!isDead)
+            {
+            animator.speed = 0;
+            }
             return;
         }
-       animator.SetBool("moving" ,true );
+        animator.speed = 1;
+        animator.SetBool("moving" ,true );
       if (Input.GetKey(KeyCode.LeftArrow))
         {
             movmentController.SetDirection("left");
@@ -81,5 +96,13 @@ public class PlayerController : MonoBehaviour
         sprite.flipY = flipY;
         sprite.flipX = flipX;
 
+    }
+
+    public void Death()
+    {
+        isDead = true;
+        animator.SetBool("moving", false);
+        animator.speed = 1;
+        animator.SetBool("dead", true);
     }
 }

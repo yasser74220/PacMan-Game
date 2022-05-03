@@ -26,6 +26,10 @@ public class NodeController : MonoBehaviour
 
     public GameManager gameManager;
     public bool isSideNodes = false;
+
+    public bool isPowerPellet = false;
+    public float powerPelletBlinkingTimer = 0;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -100,7 +104,20 @@ public class NodeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameManager.GameIsRunning)
+        {
+            return;
 
+        }
+        if (isPowerPellet && hasPellet)
+        {
+            powerPelletBlinkingTimer += Time.deltaTime;
+            if(powerPelletBlinkingTimer >= 0.1f)
+            {
+                powerPelletBlinkingTimer = 0;
+                pelletSprite.enabled = !pelletSprite.enabled;
+            }
+        }
     }
 
     public GameObject GetNodeFromDirection(string direction)
@@ -132,11 +149,11 @@ public class NodeController : MonoBehaviour
     }
     public void Responepellet()
     {
-        if(isPelletNode)
+        if (isPelletNode)
         {
             hasPellet = true;
             pelletSprite.enabled = true;
-                               
+
         }
     }
 
@@ -147,7 +164,7 @@ public class NodeController : MonoBehaviour
         {
             hasPellet = false;
             pelletSprite.enabled = false;
-            gameManager.collectedPellet(this);
+            StartCoroutine(gameManager.collectedPellet(this));
         }
     }
 

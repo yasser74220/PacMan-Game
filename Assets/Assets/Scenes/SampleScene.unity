@@ -284,6 +284,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388058}
   m_CullTransparentMesh: 1
+--- !u!1 &3953627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3953628}
+  - component: {fileID: 3953630}
+  - component: {fileID: 3953629}
+  m_Layer: 5
+  m_Name: LivesText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3953628
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3953627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2023166477}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 152.3, y: 169}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3953629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3953627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 19
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Lives: 3'
+--- !u!222 &3953630
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3953627}
+  m_CullTransparentMesh: 1
 --- !u!1 &7731777
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +588,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &19131400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -730,7 +811,7 @@ Transform:
   m_Children:
   - {fileID: 1882373703}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 217
+  m_RootOrder: 213
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &22101366
 MonoBehaviour:
@@ -760,6 +841,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &22101367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1011,6 +1094,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &29477542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1068,7 +1153,7 @@ Transform:
   m_Children:
   - {fileID: 1731999971}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 192
+  m_RootOrder: 188
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &34505347
 MonoBehaviour:
@@ -1098,6 +1183,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &34505348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1349,6 +1436,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &44428196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1488,7 +1577,7 @@ Transform:
   m_Children:
   - {fileID: 954121359}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 204
+  m_RootOrder: 200
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &54493463
 MonoBehaviour:
@@ -1518,6 +1607,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &54493464
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1575,7 +1666,7 @@ Transform:
   m_Children:
   - {fileID: 1932554806}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 152
+  m_RootOrder: 150
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &55651520
 MonoBehaviour:
@@ -1605,6 +1696,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &55651521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1937,6 +2030,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &65770622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2173,6 +2268,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &77257500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2275,6 +2372,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &77606357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2362,6 +2461,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &79087413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2449,6 +2550,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &81147005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2536,6 +2639,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &89614111
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2593,7 +2698,7 @@ Transform:
   m_Children:
   - {fileID: 1746554217}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 147
+  m_RootOrder: 145
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &97051427
 MonoBehaviour:
@@ -2623,6 +2728,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &97051428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2710,6 +2817,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &104287394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2797,6 +2906,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &107505690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2936,7 +3047,7 @@ Transform:
   m_Children:
   - {fileID: 937499658}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 234
+  m_RootOrder: 230
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114523109
 MonoBehaviour:
@@ -2966,6 +3077,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &114523110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3023,7 +3136,7 @@ Transform:
   m_Children:
   - {fileID: 1082423096}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 246
+  m_RootOrder: 242
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &130984433
 MonoBehaviour:
@@ -3053,6 +3166,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &130984434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3356,7 +3471,7 @@ Transform:
   m_Children:
   - {fileID: 1982113929}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 160
+  m_RootOrder: 158
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &140987212
 MonoBehaviour:
@@ -3386,6 +3501,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &140987213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3525,7 +3642,7 @@ Transform:
   m_Children:
   - {fileID: 1385705681}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 238
+  m_RootOrder: 234
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &148148155
 MonoBehaviour:
@@ -3555,6 +3672,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &148148156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3858,7 +3977,7 @@ Transform:
   m_Children:
   - {fileID: 228574668}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 148
+  m_RootOrder: 146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &154524002
 MonoBehaviour:
@@ -3888,6 +4007,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &154524003
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3945,7 +4066,7 @@ Transform:
   m_Children:
   - {fileID: 1737589978}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 146
+  m_RootOrder: 144
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &154741856
 MonoBehaviour:
@@ -3975,6 +4096,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &154741857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4214,6 +4337,8 @@ GameObject:
   - component: {fileID: 164486080}
   - component: {fileID: 164486079}
   - component: {fileID: 164486081}
+  - component: {fileID: 164486082}
+  - component: {fileID: 164486083}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4239,6 +4364,8 @@ MonoBehaviour:
   ramadanSong: {fileID: 164486078}
   munch1: {fileID: 164486080}
   munch2: {fileID: 164486079}
+  death: {fileID: 164486082}
+  powerPelletSound: {fileID: 164486083}
   currentMunch: 0
   score: 0
   scoreText: {fileID: 1388060}
@@ -4265,7 +4392,19 @@ MonoBehaviour:
   lives: 3
   currentlevel: 1
   nodeControllers: []
+  BlackBackground: {fileID: 1050829784}
+  gameOverText: {fileID: 1351585810}
+  LivesText: {fileID: 3953629}
   currentGosteMode: 0
+  ghostModeTimers: 07000000140000000700000014000000050000001400000005000000
+  ghostModeTimerIndex: 0
+  ghostModeTimer: 0
+  runningTimer: 0
+  completedTimer: 0
+  isPowerPelletRunning: 0
+  currentPowerPelletTime: 0
+  powerPelletTimer: 8
+  powerPelletMultiplyer: 1
 --- !u!4 &164486077
 Transform:
   m_ObjectHideFlags: 0
@@ -4273,7 +4412,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164486075}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.260056, y: 0.20094347, z: -0.5927639}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4588,6 +4727,198 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
+  MinDistance: 1.0560083
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &164486082
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164486075}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8adf9fc77e950434d9be1cf817304d43, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &164486083
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164486075}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5805ae72274f21e4785c12f93cd23cd4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -4725,6 +5056,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &166820213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5028,7 +5361,7 @@ Transform:
   m_Children:
   - {fileID: 768901455}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 209
+  m_RootOrder: 205
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &170620376
 MonoBehaviour:
@@ -5058,6 +5391,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &170620377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5115,7 +5450,7 @@ Transform:
   m_Children:
   - {fileID: 1685019522}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 220
+  m_RootOrder: 216
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &174778404
 MonoBehaviour:
@@ -5145,6 +5480,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &174778405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6216,6 +6553,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &228228344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6385,6 +6724,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &230043699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6472,6 +6813,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &232506849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6559,6 +6902,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &233208353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6780,7 +7125,7 @@ Transform:
   m_Children:
   - {fileID: 569852501}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 255
+  m_RootOrder: 251
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &239998552
 MonoBehaviour:
@@ -6810,6 +7155,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &239998553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6867,7 +7214,7 @@ Transform:
   m_Children:
   - {fileID: 1191307808}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 256
+  m_RootOrder: 252
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &244060844
 MonoBehaviour:
@@ -6897,6 +7244,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &244060845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7036,7 +7385,7 @@ Transform:
   m_Children:
   - {fileID: 1878786786}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 236
+  m_RootOrder: 232
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &262374032
 MonoBehaviour:
@@ -7066,6 +7415,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &262374033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7645,6 +7996,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &282576749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7814,6 +8167,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &291178002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7871,7 +8226,7 @@ Transform:
   m_Children:
   - {fileID: 842405190}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 184
+  m_RootOrder: 180
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &291831262
 MonoBehaviour:
@@ -7901,6 +8256,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &291831263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8070,6 +8427,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &305582274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8161,7 +8520,7 @@ Transform:
   m_Children:
   - {fileID: 1322576265}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 250
+  m_RootOrder: 246
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &311705791
 MonoBehaviour:
@@ -8191,6 +8550,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &311705792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8278,6 +8639,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &318219365
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8335,7 +8698,7 @@ Transform:
   m_Children:
   - {fileID: 2093944512}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 252
+  m_RootOrder: 248
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &319239788
 MonoBehaviour:
@@ -8365,6 +8728,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &319239789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8422,7 +8787,7 @@ Transform:
   m_Children:
   - {fileID: 1513021813}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 206
+  m_RootOrder: 202
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &322073270
 MonoBehaviour:
@@ -8452,6 +8817,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &322073271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8591,7 +8958,7 @@ Transform:
   m_Children:
   - {fileID: 1530224642}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 181
+  m_RootOrder: 177
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &340820925
 MonoBehaviour:
@@ -8621,6 +8988,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &340820926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8708,6 +9077,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &340982565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8944,6 +9315,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &355914939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9015,7 +9388,7 @@ Transform:
   m_Children:
   - {fileID: 1082987495}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 195
+  m_RootOrder: 191
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &356331495
 MonoBehaviour:
@@ -9045,6 +9418,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &356331496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9132,6 +9507,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &356453234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9189,7 +9566,7 @@ Transform:
   m_Children:
   - {fileID: 546773663}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 211
+  m_RootOrder: 207
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &359360259
 MonoBehaviour:
@@ -9219,6 +9596,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &359360260
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9388,6 +9767,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &362570179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9691,7 +10072,7 @@ Transform:
   m_Children:
   - {fileID: 1216807421}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 203
+  m_RootOrder: 199
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &373415437
 MonoBehaviour:
@@ -9721,6 +10102,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &373415438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9860,7 +10243,7 @@ Transform:
   m_Children:
   - {fileID: 656004888}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 242
+  m_RootOrder: 238
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &381973716
 MonoBehaviour:
@@ -9890,6 +10273,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &381973717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10059,6 +10444,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &395172353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10146,6 +10533,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &396631361
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10203,7 +10592,7 @@ Transform:
   m_Children:
   - {fileID: 733481562}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 249
+  m_RootOrder: 245
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &397291180
 MonoBehaviour:
@@ -10233,6 +10622,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &397291181
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10290,7 +10681,7 @@ Transform:
   m_Children:
   - {fileID: 2145485245}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 244
+  m_RootOrder: 240
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &400730318
 MonoBehaviour:
@@ -10320,6 +10711,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &400730319
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10510,6 +10903,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &412169430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412169431}
+  m_Layer: 0
+  m_Name: PowerPelletNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412169431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412169430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 773997274}
+  - {fileID: 1788581345}
+  - {fileID: 698481765}
+  - {fileID: 813927051}
+  m_Father: {fileID: 620494870}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &412703967
 GameObject:
   m_ObjectHideFlags: 0
@@ -10541,7 +10968,7 @@ Transform:
   m_Children:
   - {fileID: 1730785853}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 159
+  m_RootOrder: 157
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &412703969
 MonoBehaviour:
@@ -10571,6 +10998,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &412703970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10658,6 +11087,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &414068354
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10827,6 +11258,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &436626792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11130,7 +11563,7 @@ Transform:
   m_Children:
   - {fileID: 455462486}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 191
+  m_RootOrder: 187
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &446310099
 MonoBehaviour:
@@ -11160,6 +11593,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &446310100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11212,7 +11647,7 @@ Transform:
   m_GameObject: {fileID: 447913067}
   m_LocalRotation: {x: -0, y: -0, z: 0.0011789479, w: -0.99999934}
   m_LocalPosition: {x: -0.0285, y: -0.0089, z: 0}
-  m_LocalScale: {x: 0.049127515, y: 0.05938012, z: 1}
+  m_LocalScale: {x: 0.04912752, y: 0.05938012, z: 1}
   m_Children: []
   m_Father: {fileID: 698481765}
   m_RootOrder: 0
@@ -11299,7 +11734,7 @@ Transform:
   m_Children:
   - {fileID: 158673634}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 258
+  m_RootOrder: 254
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &450251359
 MonoBehaviour:
@@ -11329,6 +11764,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &450251360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11386,7 +11823,7 @@ Transform:
   m_Children:
   - {fileID: 289719905}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 207
+  m_RootOrder: 203
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &451784518
 MonoBehaviour:
@@ -11416,6 +11853,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &451784519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11585,6 +12024,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &464709070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11672,6 +12113,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &469170543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11841,6 +12284,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &473253801
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12144,7 +12589,7 @@ Transform:
   m_Children:
   - {fileID: 1469190682}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 158
+  m_RootOrder: 156
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &483274017
 MonoBehaviour:
@@ -12174,6 +12619,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &483274018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12261,6 +12708,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &485256075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12318,7 +12767,7 @@ Transform:
   m_Children:
   - {fileID: 567217053}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 157
+  m_RootOrder: 155
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &491475834
 MonoBehaviour:
@@ -12348,6 +12797,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &491475835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12435,6 +12886,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &491828880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12739,7 +13192,7 @@ Transform:
   m_Children:
   - {fileID: 175297769}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 233
+  m_RootOrder: 229
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519660554
 MonoBehaviour:
@@ -12769,6 +13222,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &519660555
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12908,7 +13363,7 @@ Transform:
   m_Children:
   - {fileID: 1079210058}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 235
+  m_RootOrder: 231
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &527279718
 MonoBehaviour:
@@ -12938,6 +13393,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &527279719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12995,7 +13452,7 @@ Transform:
   m_Children:
   - {fileID: 1244009643}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 142
+  m_RootOrder: 140
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &535686417
 MonoBehaviour:
@@ -13025,6 +13482,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &535686418
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13194,6 +13653,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &552076045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13251,7 +13712,7 @@ Transform:
   m_Children:
   - {fileID: 1045237855}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 153
+  m_RootOrder: 151
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &553308963
 MonoBehaviour:
@@ -13281,6 +13742,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &553308964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13450,6 +13913,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &554573690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13506,7 +13971,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 140
+  m_RootOrder: 138
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &558221077
 MonoBehaviour:
@@ -13536,6 +14001,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &558221078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13593,7 +14060,7 @@ Transform:
   m_Children:
   - {fileID: 796740752}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 193
+  m_RootOrder: 189
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &558383485
 MonoBehaviour:
@@ -13623,6 +14090,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &558383486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13792,6 +14261,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &562792268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14042,6 +14513,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &569457843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14263,7 +14736,7 @@ Transform:
   m_Children:
   - {fileID: 561719357}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 185
+  m_RootOrder: 181
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &580336113
 MonoBehaviour:
@@ -14293,6 +14766,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &580336114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14380,6 +14855,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &581625108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14437,7 +14914,7 @@ Transform:
   m_Children:
   - {fileID: 1785692309}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 240
+  m_RootOrder: 236
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &588790220
 MonoBehaviour:
@@ -14467,6 +14944,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &588790221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14524,7 +15003,7 @@ Transform:
   m_Children:
   - {fileID: 1073166545}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 144
+  m_RootOrder: 142
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &591337640
 MonoBehaviour:
@@ -14554,6 +15033,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &591337641
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14626,6 +15107,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &591540767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14728,6 +15211,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &593878535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15061,6 +15546,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &608143823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15148,6 +15635,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &612700132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15235,6 +15724,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &614534778
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15322,6 +15813,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &616385212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15491,6 +15984,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &620398875
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15552,6 +16047,7 @@ Transform:
   - {fileID: 734431828}
   - {fileID: 1685061937}
   - {fileID: 1424969027}
+  - {fileID: 412169431}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15586,7 +16082,7 @@ Transform:
   m_Children:
   - {fileID: 1277271553}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 213
+  m_RootOrder: 209
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &622917138
 MonoBehaviour:
@@ -15616,6 +16112,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &622917139
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15867,6 +16365,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &627610147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15954,6 +16454,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &632018706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16041,6 +16543,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &636278360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16098,7 +16602,7 @@ Transform:
   m_Children:
   - {fileID: 280368099}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 198
+  m_RootOrder: 194
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &637253542
 MonoBehaviour:
@@ -16128,6 +16632,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &637253543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16349,7 +16855,7 @@ Transform:
   m_Children:
   - {fileID: 750319770}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 247
+  m_RootOrder: 243
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &663249148
 MonoBehaviour:
@@ -16379,6 +16885,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &663249149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16466,6 +16974,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &667856869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16605,7 +17115,7 @@ Transform:
   m_Children:
   - {fileID: 1047748145}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 222
+  m_RootOrder: 218
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &671929553
 MonoBehaviour:
@@ -16635,6 +17145,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &671929554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16804,6 +17316,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &673507716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16891,6 +17405,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &677403422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16978,6 +17494,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &678732644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17147,6 +17665,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &678957501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17204,7 +17724,7 @@ Transform:
   m_Children:
   - {fileID: 837880400}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 243
+  m_RootOrder: 239
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &681961432
 MonoBehaviour:
@@ -17234,6 +17754,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &681961433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17451,11 +17973,11 @@ Transform:
   m_GameObject: {fileID: 698481764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.75, y: -2.1100001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 447913068}
-  m_Father: {fileID: 1391294755}
-  m_RootOrder: 164
+  m_Father: {fileID: 412169431}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &698481766
 MonoBehaviour:
@@ -17485,6 +18007,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 1
+  powerPelletBlinkingTimer: 0
 --- !u!61 &698481767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17706,7 +18230,7 @@ Transform:
   m_Children:
   - {fileID: 1569421650}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 237
+  m_RootOrder: 233
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &703517905
 MonoBehaviour:
@@ -17736,6 +18260,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &703517906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17987,6 +18513,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &722643833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18156,6 +18684,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &727288910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18688,6 +19218,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &744453187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18774,6 +19306,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &750030802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19025,6 +19559,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &757767453
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19328,7 +19864,7 @@ Transform:
   m_Children:
   - {fileID: 224194432}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 136
+  m_RootOrder: 135
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &772210578
 MonoBehaviour:
@@ -19358,6 +19894,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &772210579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19411,11 +19949,11 @@ Transform:
   m_GameObject: {fileID: 773997273}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.75, y: 3.8900023, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 1548175236}
-  m_Father: {fileID: 1391294755}
-  m_RootOrder: 172
+  m_Father: {fileID: 412169431}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &773997275
 MonoBehaviour:
@@ -19445,6 +19983,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 1
+  powerPelletBlinkingTimer: 0
 --- !u!61 &773997276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19532,6 +20072,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &776608438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19619,6 +20161,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &777265788
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19705,6 +20249,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &779139166
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19788,7 +20334,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -409913357
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -500
   m_Sprite: {fileID: 21300000, guid: 7c224677d7249a04e90ad411463c1590, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -19896,6 +20442,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &784578708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19953,7 +20501,7 @@ Transform:
   m_Children:
   - {fileID: 1042180421}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 131
+  m_RootOrder: 130
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &788176321
 MonoBehaviour:
@@ -19983,6 +20531,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &788176322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20152,6 +20702,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &796217733
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20321,6 +20873,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &798377983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20460,7 +21014,7 @@ Transform:
   m_Children:
   - {fileID: 1404329430}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 171
+  m_RootOrder: 168
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &805289156
 MonoBehaviour:
@@ -20490,6 +21044,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &805289157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20707,11 +21263,11 @@ Transform:
   m_GameObject: {fileID: 813927050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.750002, y: -2.1100001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 990046874}
-  m_Father: {fileID: 1391294755}
-  m_RootOrder: 130
+  m_Father: {fileID: 412169431}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &813927052
 MonoBehaviour:
@@ -20741,6 +21297,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 1
+  powerPelletBlinkingTimer: 0
 --- !u!61 &813927053
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20798,7 +21356,7 @@ Transform:
   m_Children:
   - {fileID: 277907807}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 149
+  m_RootOrder: 147
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &820000094
 MonoBehaviour:
@@ -20828,6 +21386,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &820000095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21078,6 +21638,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &830188256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21575,6 +22137,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &854395269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21826,6 +22390,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &860580338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21995,6 +22561,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &869160321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22052,7 +22620,7 @@ Transform:
   m_Children:
   - {fileID: 1747832783}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 145
+  m_RootOrder: 143
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &871893333
 MonoBehaviour:
@@ -22082,6 +22650,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &871893334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22251,6 +22821,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &876213396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22338,6 +22910,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &882197407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22395,7 +22969,7 @@ Transform:
   m_Children:
   - {fileID: 804417379}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 197
+  m_RootOrder: 193
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &884467964
 MonoBehaviour:
@@ -22425,6 +22999,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &884467965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22512,6 +23088,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &897629785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22651,7 +23229,7 @@ Transform:
   m_Children:
   - {fileID: 1215992651}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 155
+  m_RootOrder: 153
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &898287322
 MonoBehaviour:
@@ -22681,6 +23259,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &898287323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22850,6 +23430,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &909039873
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22937,6 +23519,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &917084811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23024,6 +23608,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &924169792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23081,7 +23667,7 @@ Transform:
   m_Children:
   - {fileID: 1150703127}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 189
+  m_RootOrder: 185
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &926552770
 MonoBehaviour:
@@ -23111,6 +23697,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &926552771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23198,6 +23786,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &926880305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23250,7 +23840,7 @@ Transform:
   m_GameObject: {fileID: 929631172}
   m_LocalRotation: {x: -0, y: -0, z: 0.0011789479, w: -0.99999934}
   m_LocalPosition: {x: -0.0285, y: -0.0089, z: 0}
-  m_LocalScale: {x: 0.049127515, y: 0.05938012, z: 1}
+  m_LocalScale: {x: 0.04912752, y: 0.05938012, z: 1}
   m_Children: []
   m_Father: {fileID: 1801246541}
   m_RootOrder: 0
@@ -23665,7 +24255,7 @@ Transform:
   m_Children:
   - {fileID: 624439169}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 224
+  m_RootOrder: 220
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &938800273
 MonoBehaviour:
@@ -23695,6 +24285,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &938800274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23752,7 +24344,7 @@ Transform:
   m_Children:
   - {fileID: 1761151517}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 216
+  m_RootOrder: 212
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &939444517
 MonoBehaviour:
@@ -23782,6 +24374,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &939444518
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23839,7 +24433,7 @@ Transform:
   m_Children:
   - {fileID: 2075413046}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 251
+  m_RootOrder: 247
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &939642080
 MonoBehaviour:
@@ -23869,6 +24463,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &939642081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24120,6 +24716,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &946324191
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24207,6 +24805,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &949414359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24376,6 +24976,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &959031105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24597,7 +25199,7 @@ Transform:
   m_Children:
   - {fileID: 1745555915}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 201
+  m_RootOrder: 197
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &965524775
 MonoBehaviour:
@@ -24627,6 +25229,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &965524776
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24878,6 +25482,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &984887534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25012,7 +25618,7 @@ Transform:
   m_GameObject: {fileID: 990046873}
   m_LocalRotation: {x: -0, y: -0, z: 0.0011789479, w: -0.99999934}
   m_LocalPosition: {x: -0.0285, y: -0.0089, z: 0}
-  m_LocalScale: {x: 0.049127515, y: 0.05938012, z: 1}
+  m_LocalScale: {x: 0.04912752, y: 0.05938012, z: 1}
   m_Children: []
   m_Father: {fileID: 813927051}
   m_RootOrder: 0
@@ -25211,6 +25817,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &995562454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25462,6 +26070,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1003075704
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25549,6 +26159,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1015783966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25688,7 +26300,7 @@ Transform:
   m_Children:
   - {fileID: 41335900}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 188
+  m_RootOrder: 184
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1029946513
 MonoBehaviour:
@@ -25718,6 +26330,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1029946514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25757,6 +26371,7 @@ GameObject:
   - component: {fileID: 1030365695}
   - component: {fileID: 1030365694}
   - component: {fileID: 1030365698}
+  - component: {fileID: 1030365699}
   m_Layer: 0
   m_Name: Red
   m_TagString: Enemy
@@ -25829,7 +26444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   currentNode: {fileID: 0}
-  speed: 3
+  speed: 2
   direction: 
   lastMovingDirection: right
   canWarp: 1
@@ -25868,6 +26483,11 @@ MonoBehaviour:
   - {fileID: 744453184}
   scatterNodesindex: 0
   leftHomeBefor: 0
+  isVisible: 1
+  ghostSprite: {fileID: 0}
+  eyeeSprite: {fileID: 1326963708}
+  animator: {fileID: 0}
+  color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &1030365697
 Transform:
   m_ObjectHideFlags: 0
@@ -25909,6 +26529,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5214026, y: 1.4710869}
   m_EdgeRadius: 0
+--- !u!95 &1030365699
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030365693}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61eee69f9bca02641918d70aefa7c303, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1033436097
 GameObject:
   m_ObjectHideFlags: 0
@@ -25970,6 +26609,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1033436100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26191,7 +26832,7 @@ Transform:
   m_Children:
   - {fileID: 1000419691}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 135
+  m_RootOrder: 134
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1045013825
 MonoBehaviour:
@@ -26221,6 +26862,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1045013826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26360,7 +27003,7 @@ Transform:
   m_Children:
   - {fileID: 1299871728}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 208
+  m_RootOrder: 204
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1047647173
 MonoBehaviour:
@@ -26390,6 +27033,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1047647174
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26498,6 +27143,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1050829782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1050829783}
+  - component: {fileID: 1050829785}
+  - component: {fileID: 1050829784}
+  m_Layer: 5
+  m_Name: BlackBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1050829783
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050829782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2023166477}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1050829784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050829782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1050829785
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050829782}
+  m_CullTransparentMesh: 1
 --- !u!1 &1051966689
 GameObject:
   m_ObjectHideFlags: 0
@@ -26641,6 +27361,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1054795622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26698,7 +27420,7 @@ Transform:
   m_Children:
   - {fileID: 933916017}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 241
+  m_RootOrder: 237
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1055420718
 MonoBehaviour:
@@ -26728,6 +27450,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1055420719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26815,6 +27539,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1057828708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27086,6 +27812,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1066522787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27173,6 +27901,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1069755784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27342,6 +28072,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1074985982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27429,6 +28161,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1075973877
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27650,7 +28384,7 @@ Transform:
   m_Children:
   - {fileID: 350535382}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 261
+  m_RootOrder: 257
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1080273615
 MonoBehaviour:
@@ -27680,6 +28414,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1080273616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27931,6 +28667,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1092896104
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27988,7 +28726,7 @@ Transform:
   m_Children:
   - {fileID: 1021984677}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 150
+  m_RootOrder: 148
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1093087748
 MonoBehaviour:
@@ -28018,6 +28756,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1093087749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28187,6 +28927,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1096382931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28244,7 +28986,7 @@ Transform:
   m_Children:
   - {fileID: 2011796196}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 176
+  m_RootOrder: 172
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1103310169
 MonoBehaviour:
@@ -28274,6 +29016,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1103310170
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28361,6 +29105,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1104027267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28418,7 +29164,7 @@ Transform:
   m_Children:
   - {fileID: 1877652554}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 167
+  m_RootOrder: 164
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1106370343
 MonoBehaviour:
@@ -28448,6 +29194,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1106370344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28505,7 +29253,7 @@ Transform:
   m_Children:
   - {fileID: 1415184733}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 168
+  m_RootOrder: 165
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1109305565
 MonoBehaviour:
@@ -28535,6 +29283,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1109305566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28704,6 +29454,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1114961036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28843,7 +29595,7 @@ Transform:
   m_Children:
   - {fileID: 1950839863}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 156
+  m_RootOrder: 154
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1121219299
 MonoBehaviour:
@@ -28873,6 +29625,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1121219300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28960,6 +29714,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1125589581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29017,7 +29773,7 @@ Transform:
   m_Children:
   - {fileID: 678847216}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 163
+  m_RootOrder: 161
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1126073855
 MonoBehaviour:
@@ -29047,6 +29803,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1126073856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29186,7 +29944,7 @@ Transform:
   m_Children:
   - {fileID: 859115243}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 154
+  m_RootOrder: 152
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1132426711
 MonoBehaviour:
@@ -29216,6 +29974,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1132426712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29385,6 +30145,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1136621802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29636,6 +30398,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1146536358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29775,7 +30539,7 @@ Transform:
   m_Children:
   - {fileID: 1607785970}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 229
+  m_RootOrder: 225
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1152071105
 MonoBehaviour:
@@ -29805,6 +30569,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1152071106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29944,7 +30710,7 @@ Transform:
   m_Children:
   - {fileID: 1393933500}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 232
+  m_RootOrder: 228
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1164828081
 MonoBehaviour:
@@ -29974,6 +30740,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1164828082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30113,7 +30881,7 @@ Transform:
   m_Children:
   - {fileID: 1595753373}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 186
+  m_RootOrder: 182
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1173188697
 MonoBehaviour:
@@ -30143,6 +30911,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1173188698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30364,7 +31134,7 @@ Transform:
   m_Children:
   - {fileID: 1411388670}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 137
+  m_RootOrder: 136
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1180851439
 MonoBehaviour:
@@ -30394,6 +31164,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1180851440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30645,6 +31417,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1197762399
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30702,7 +31476,7 @@ Transform:
   m_Children:
   - {fileID: 479138744}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 151
+  m_RootOrder: 149
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1207146749
 MonoBehaviour:
@@ -30732,6 +31506,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1207146750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30901,6 +31677,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1208603586
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31070,6 +31848,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1213800476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31415,6 +32195,7 @@ MonoBehaviour:
   startNode: {fileID: 0}
   startPosition: {x: 0, y: 0}
   gameManager: {fileID: 0}
+  isDead: 0
 --- !u!1 &1239863336
 GameObject:
   m_ObjectHideFlags: 0
@@ -31476,6 +32257,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1239863339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31597,6 +32380,7 @@ GameObject:
   - component: {fileID: 1253779873}
   - component: {fileID: 1253779872}
   - component: {fileID: 1253779871}
+  - component: {fileID: 1253779876}
   m_Layer: 0
   m_Name: orange
   m_TagString: Enemy
@@ -31695,7 +32479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   currentNode: {fileID: 0}
-  speed: 3
+  speed: 2
   direction: 
   lastMovingDirection: 
   canWarp: 1
@@ -31737,6 +32521,11 @@ MonoBehaviour:
   - {fileID: 616385209}
   scatterNodesindex: 0
   leftHomeBefor: 0
+  isVisible: 1
+  ghostSprite: {fileID: 0}
+  eyeeSprite: {fileID: 1640326775}
+  animator: {fileID: 0}
+  color: {r: 0.98039216, g: 0.54509807, b: 0.05882353, a: 1}
 --- !u!4 &1253779875
 Transform:
   m_ObjectHideFlags: 0
@@ -31745,13 +32534,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253779870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.84, y: 0.304, z: -62.606186}
+  m_LocalPosition: {x: 5.859, y: 0.283, z: -62.606186}
   m_LocalScale: {x: 0.16, y: 0.16, z: 1}
   m_Children:
   - {fileID: 1640326774}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1253779876
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253779870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61eee69f9bca02641918d70aefa7c303, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1254639105
 GameObject:
   m_ObjectHideFlags: 0
@@ -31813,6 +32621,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1254639108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31900,6 +32710,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1260551225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32121,7 +32933,7 @@ Transform:
   m_Children:
   - {fileID: 216234884}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 239
+  m_RootOrder: 235
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1275061352
 MonoBehaviour:
@@ -32151,6 +32963,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1275061353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32238,6 +33052,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1275753455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32325,6 +33141,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1276172736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32412,6 +33230,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1276199075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32551,7 +33371,7 @@ Transform:
   m_Children:
   - {fileID: 699319636}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 165
+  m_RootOrder: 162
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1285160691
 MonoBehaviour:
@@ -32581,6 +33401,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1285160692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32720,7 +33542,7 @@ Transform:
   m_Children:
   - {fileID: 960511330}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 228
+  m_RootOrder: 224
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1289711112
 MonoBehaviour:
@@ -32750,6 +33572,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1289711113
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32837,6 +33661,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1290163445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32894,7 +33720,7 @@ Transform:
   m_Children:
   - {fileID: 1171958757}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 141
+  m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1293699067
 MonoBehaviour:
@@ -32924,6 +33750,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1293699068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33011,6 +33839,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1293828495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33426,6 +34256,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1314354246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33483,7 +34315,7 @@ Transform:
   m_Children:
   - {fileID: 2012539985}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 248
+  m_RootOrder: 244
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1317221570
 MonoBehaviour:
@@ -33513,6 +34345,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1317221571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33600,6 +34434,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1319046630
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33739,7 +34575,7 @@ Transform:
   m_Children:
   - {fileID: 1133107767}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 219
+  m_RootOrder: 215
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1324640071
 MonoBehaviour:
@@ -33769,6 +34605,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1324640072
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33938,6 +34776,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1328995170
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34025,6 +34865,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1336056041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34064,6 +34906,7 @@ GameObject:
   - component: {fileID: 1336109148}
   - component: {fileID: 1336109147}
   - component: {fileID: 1336109146}
+  - component: {fileID: 1336109151}
   m_Layer: 0
   m_Name: pink
   m_TagString: Enemy
@@ -34162,7 +35005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   currentNode: {fileID: 0}
-  speed: 3
+  speed: 2
   direction: 
   lastMovingDirection: 
   canWarp: 1
@@ -34201,6 +35044,11 @@ MonoBehaviour:
   - {fileID: 1290163442}
   scatterNodesindex: 0
   leftHomeBefor: 0
+  isVisible: 1
+  ghostSprite: {fileID: 0}
+  eyeeSprite: {fileID: 113175261}
+  animator: {fileID: 0}
+  color: {r: 0.98039216, g: 0.5568628, b: 0.88235295, a: 1}
 --- !u!4 &1336109150
 Transform:
   m_ObjectHideFlags: 0
@@ -34209,13 +35057,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336109145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.18, y: 0.3, z: -62.606186}
+  m_LocalPosition: {x: 5.231, y: 0.3, z: -62.606186}
   m_LocalScale: {x: 0.16, y: 0.16, z: 1}
   m_Children:
   - {fileID: 113175260}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1336109151
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336109145}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61eee69f9bca02641918d70aefa7c303, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1340198689
 GameObject:
   m_ObjectHideFlags: 0
@@ -34329,7 +35196,7 @@ Transform:
   m_Children:
   - {fileID: 250725263}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 180
+  m_RootOrder: 176
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1342562150
 MonoBehaviour:
@@ -34359,6 +35226,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1342562151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34385,6 +35254,85 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.12160146, y: 0.18149209}
   m_EdgeRadius: 0
+--- !u!1 &1351585808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1351585809}
+  - component: {fileID: 1351585811}
+  - component: {fileID: 1351585810}
+  m_Layer: 5
+  m_Name: GameOverText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1351585809
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351585808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2023166477}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 39.9, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1351585810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351585808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9528302, g: 0.021573486, b: 0.021573486, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 15
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Game Over '
+--- !u!222 &1351585811
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351585808}
+  m_CullTransparentMesh: 1
 --- !u!1 &1353966845
 GameObject:
   m_ObjectHideFlags: 0
@@ -34416,7 +35364,7 @@ Transform:
   m_Children:
   - {fileID: 40420141}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 259
+  m_RootOrder: 255
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1353966847
 MonoBehaviour:
@@ -34446,6 +35394,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1353966848
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34533,6 +35483,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1356680221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34620,6 +35572,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1384281917
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34707,6 +35661,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1384399388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34972,7 +35928,6 @@ Transform:
   - {fileID: 1356680219}
   - {fileID: 1969711967}
   - {fileID: 614534776}
-  - {fileID: 813927051}
   - {fileID: 788176320}
   - {fileID: 2132164111}
   - {fileID: 2107371298}
@@ -34980,7 +35935,6 @@ Transform:
   - {fileID: 1045013824}
   - {fileID: 772210577}
   - {fileID: 1180851438}
-  - {fileID: 1788581345}
   - {fileID: 1406748215}
   - {fileID: 558221076}
   - {fileID: 1293699066}
@@ -35006,7 +35960,6 @@ Transform:
   - {fileID: 2101907247}
   - {fileID: 2129277421}
   - {fileID: 1126073854}
-  - {fileID: 698481765}
   - {fileID: 1285160690}
   - {fileID: 1903835423}
   - {fileID: 1106370342}
@@ -35014,7 +35967,6 @@ Transform:
   - {fileID: 1627675461}
   - {fileID: 1500413703}
   - {fileID: 805289155}
-  - {fileID: 773997274}
   - {fileID: 1565803858}
   - {fileID: 1979661648}
   - {fileID: 1640885375}
@@ -35168,6 +36120,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1393047019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35389,7 +36343,7 @@ Transform:
   m_Children:
   - {fileID: 1561327631}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 196
+  m_RootOrder: 192
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1400556487
 MonoBehaviour:
@@ -35419,6 +36373,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1400556488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35558,7 +36514,7 @@ Transform:
   m_Children:
   - {fileID: 426965736}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 139
+  m_RootOrder: 137
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1406748216
 MonoBehaviour:
@@ -35588,6 +36544,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1406748217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36166,6 +37124,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1423230579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36223,7 +37183,7 @@ Transform:
   m_Children:
   - {fileID: 1064551795}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 218
+  m_RootOrder: 214
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1424179089
 MonoBehaviour:
@@ -36253,6 +37213,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1424179090
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36378,6 +37340,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1428269267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36464,6 +37428,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1435857113
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36767,7 +37733,7 @@ Transform:
   m_Children:
   - {fileID: 564147625}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 205
+  m_RootOrder: 201
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1444246937
 MonoBehaviour:
@@ -36797,6 +37763,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1444246938
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36973,7 +37941,7 @@ Transform:
   m_Children:
   - {fileID: 1564871613}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 194
+  m_RootOrder: 190
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1455779861
 MonoBehaviour:
@@ -37003,6 +37971,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1455779862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37264,7 +38234,7 @@ SpriteRenderer:
   m_SortingLayerID: 1177416361
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c56b60d1c6abb942aac85ef6ce47f1f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -37272,7 +38242,7 @@ SpriteRenderer:
   m_Size: {x: 0.05, y: 0.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1480114457
@@ -37306,7 +38276,7 @@ Transform:
   m_Children:
   - {fileID: 203698955}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 254
+  m_RootOrder: 250
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1480114459
 MonoBehaviour:
@@ -37336,6 +38306,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1480114460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37423,6 +38395,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1484324373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37562,7 +38536,7 @@ Transform:
   m_Children:
   - {fileID: 168629269}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 182
+  m_RootOrder: 178
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1486251375
 MonoBehaviour:
@@ -37592,6 +38566,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1486251376
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37678,6 +38654,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1489997678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37899,7 +38877,7 @@ Transform:
   m_Children:
   - {fileID: 725530016}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 231
+  m_RootOrder: 227
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1497729964
 MonoBehaviour:
@@ -37929,6 +38907,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1497729965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37986,7 +38966,7 @@ Transform:
   m_Children:
   - {fileID: 1783930908}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 223
+  m_RootOrder: 219
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1499945508
 MonoBehaviour:
@@ -38016,6 +38996,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1499945509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38073,7 +39055,7 @@ Transform:
   m_Children:
   - {fileID: 553539477}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 170
+  m_RootOrder: 167
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1500413704
 MonoBehaviour:
@@ -38103,6 +39085,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1500413705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38190,6 +39174,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1509309729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38769,6 +39755,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1531418532
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38908,7 +39896,7 @@ Transform:
   m_Children:
   - {fileID: 1685264569}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 202
+  m_RootOrder: 198
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1536964536
 MonoBehaviour:
@@ -38938,6 +39926,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1536964537
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39025,6 +40015,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1539589153
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39159,7 +40151,7 @@ Transform:
   m_GameObject: {fileID: 1548175235}
   m_LocalRotation: {x: -0, y: -0, z: 0.0011789479, w: -0.99999934}
   m_LocalPosition: {x: -0.0285, y: -0.0089, z: 0}
-  m_LocalScale: {x: 0.049127515, y: 0.05938012, z: 1}
+  m_LocalScale: {x: 0.04912752, y: 0.05938012, z: 1}
   m_Children: []
   m_Father: {fileID: 773997274}
   m_RootOrder: 0
@@ -39276,6 +40268,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1548901326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39743,7 +40737,7 @@ Transform:
   m_Children:
   - {fileID: 1444407511}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 173
+  m_RootOrder: 169
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1565803859
 MonoBehaviour:
@@ -39773,6 +40767,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1565803860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39942,6 +40938,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1569594156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40111,6 +41109,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1582577628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40168,7 +41168,7 @@ Transform:
   m_Children:
   - {fileID: 2086988190}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 177
+  m_RootOrder: 173
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1585525512
 MonoBehaviour:
@@ -40198,6 +41198,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1585525513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40255,7 +41257,7 @@ Transform:
   m_Children:
   - {fileID: 856121453}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 253
+  m_RootOrder: 249
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1595436029
 MonoBehaviour:
@@ -40285,6 +41287,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1595436030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40536,6 +41540,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1608943160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40705,6 +41711,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1611127884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40956,6 +41964,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1617979762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41013,7 +42023,7 @@ Transform:
   m_Children:
   - {fileID: 1913396039}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 190
+  m_RootOrder: 186
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1621013978
 MonoBehaviour:
@@ -41043,6 +42053,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1621013979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41130,6 +42142,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1624590096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41187,7 +42201,7 @@ Transform:
   m_Children:
   - {fileID: 770633044}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 169
+  m_RootOrder: 166
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1627675462
 MonoBehaviour:
@@ -41217,6 +42231,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1627675463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41438,7 +42454,7 @@ Transform:
   m_Children:
   - {fileID: 2028985845}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 215
+  m_RootOrder: 211
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1631896785
 MonoBehaviour:
@@ -41468,6 +42484,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1631896786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41607,7 +42625,7 @@ Transform:
   m_Children:
   - {fileID: 821522238}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 175
+  m_RootOrder: 171
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1640885376
 MonoBehaviour:
@@ -41637,6 +42655,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1640885377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41888,6 +42908,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1658614229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41975,6 +42997,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1668495689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42062,6 +43086,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1669312594
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42149,6 +43175,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1671135378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42206,7 +43234,7 @@ Transform:
   m_Children:
   - {fileID: 57027392}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 225
+  m_RootOrder: 221
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1680822411
 MonoBehaviour:
@@ -42236,6 +43264,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1680822412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42293,7 +43323,7 @@ Transform:
   m_Children:
   - {fileID: 1655018865}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 260
+  m_RootOrder: 256
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1681935904
 MonoBehaviour:
@@ -42323,6 +43353,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1681935905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42582,7 +43614,7 @@ Transform:
   m_Children:
   - {fileID: 650270134}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 227
+  m_RootOrder: 223
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1703959529
 MonoBehaviour:
@@ -42612,6 +43644,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1703959530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42709,7 +43743,7 @@ SpriteRenderer:
   m_SortingLayerID: 1177416361
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c56b60d1c6abb942aac85ef6ce47f1f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -42717,7 +43751,7 @@ SpriteRenderer:
   m_Size: {x: 0.05, y: 0.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1715574024
@@ -42781,6 +43815,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1715574027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42868,6 +43904,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1715839558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42925,7 +43963,7 @@ Transform:
   m_Children:
   - {fileID: 404848707}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 178
+  m_RootOrder: 174
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1717509273
 MonoBehaviour:
@@ -42955,6 +43993,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1717509274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43206,6 +44246,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1731601488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43457,6 +44499,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1738036594
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43514,7 +44558,7 @@ Transform:
   m_Children:
   - {fileID: 720033494}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 230
+  m_RootOrder: 226
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1739256399
 MonoBehaviour:
@@ -43544,6 +44588,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1739256400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43631,6 +44677,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1739861150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43718,6 +44766,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1740890580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43775,7 +44825,7 @@ Transform:
   m_Children:
   - {fileID: 1529390776}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 134
+  m_RootOrder: 133
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1740927919
 MonoBehaviour:
@@ -43805,6 +44855,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1740927920
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43892,6 +44944,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1742944354
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44277,7 +45331,7 @@ Transform:
   m_Children:
   - {fileID: 1959115867}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 210
+  m_RootOrder: 206
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1760424511
 MonoBehaviour:
@@ -44307,6 +45361,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1760424512
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44475,6 +45531,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1761302458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44562,6 +45620,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1764565559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44648,6 +45708,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1772720230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44787,7 +45849,7 @@ Transform:
   m_Children:
   - {fileID: 941346220}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 212
+  m_RootOrder: 208
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1783116450
 MonoBehaviour:
@@ -44817,6 +45879,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1783116451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44985,6 +46049,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1785131175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45120,11 +46186,11 @@ Transform:
   m_GameObject: {fileID: 1788581344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.750002, y: 3.8900023, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 2067437885}
-  m_Father: {fileID: 1391294755}
-  m_RootOrder: 138
+  m_Father: {fileID: 412169431}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1788581346
 MonoBehaviour:
@@ -45154,6 +46220,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 1
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1788581347
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45405,6 +46473,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1801246543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45492,6 +46562,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1802092573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45549,7 +46621,7 @@ Transform:
   m_Children:
   - {fileID: 1455880176}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 245
+  m_RootOrder: 241
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1804193655
 MonoBehaviour:
@@ -45579,6 +46651,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1804193656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45666,6 +46740,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1808470201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45753,6 +46829,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1816607787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45840,6 +46918,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1817803233
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46091,6 +47171,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1854643643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46834,6 +47916,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1883713426
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46891,7 +47975,7 @@ Transform:
   m_Children:
   - {fileID: 177852867}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 143
+  m_RootOrder: 141
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1886161766
 MonoBehaviour:
@@ -46921,6 +48005,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1886161767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46978,7 +48064,7 @@ Transform:
   m_Children:
   - {fileID: 22161760}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 166
+  m_RootOrder: 163
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1903835424
 MonoBehaviour:
@@ -47008,6 +48094,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1903835425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47147,7 +48235,7 @@ Transform:
   m_Children:
   - {fileID: 370065304}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 200
+  m_RootOrder: 196
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1908424470
 MonoBehaviour:
@@ -47177,6 +48265,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1908424471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47316,7 +48406,7 @@ Transform:
   m_Children:
   - {fileID: 1041434901}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 221
+  m_RootOrder: 217
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1914865970
 MonoBehaviour:
@@ -47346,6 +48436,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1914865971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47443,7 +48535,7 @@ SpriteRenderer:
   m_SortingLayerID: 1177416361
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c56b60d1c6abb942aac85ef6ce47f1f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -47451,7 +48543,7 @@ SpriteRenderer:
   m_Size: {x: 0.05, y: 0.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1920801242
@@ -47514,6 +48606,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1920801245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47600,6 +48694,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1922738785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47739,7 +48835,7 @@ Transform:
   m_Children:
   - {fileID: 168771134}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 179
+  m_RootOrder: 175
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1927103068
 MonoBehaviour:
@@ -47769,6 +48865,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1927103069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47938,6 +49036,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1928748681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48189,6 +49289,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1949304832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48358,6 +49460,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1955936297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48609,6 +49713,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1961900081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48778,6 +49884,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1967191678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48865,6 +49973,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1969711969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49034,6 +50144,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1976840329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49091,7 +50203,7 @@ Transform:
   m_Children:
   - {fileID: 140129447}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 174
+  m_RootOrder: 170
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1979661649
 MonoBehaviour:
@@ -49121,6 +50233,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1979661650
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49290,6 +50404,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &1998311430
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49347,7 +50463,7 @@ Transform:
   m_Children:
   - {fileID: 1272732853}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 257
+  m_RootOrder: 253
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2002672597
 MonoBehaviour:
@@ -49377,6 +50493,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2002672598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49434,7 +50552,7 @@ Transform:
   m_Children:
   - {fileID: 1295022460}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 187
+  m_RootOrder: 183
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2003669168
 MonoBehaviour:
@@ -49464,6 +50582,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2003669169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49812,6 +50932,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1388059}
+  - {fileID: 1050829783}
+  - {fileID: 1351585809}
+  - {fileID: 3953628}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49881,6 +51004,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2024921704
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50020,7 +51145,7 @@ Transform:
   m_Children:
   - {fileID: 190848810}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 214
+  m_RootOrder: 210
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2037623339
 MonoBehaviour:
@@ -50050,6 +51175,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2037623340
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50219,6 +51346,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2048218105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50306,6 +51435,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2051324103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50393,6 +51524,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2057641470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50480,6 +51613,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2060543990
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50614,7 +51749,7 @@ Transform:
   m_GameObject: {fileID: 2067437884}
   m_LocalRotation: {x: -0, y: -0, z: 0.0011789479, w: -0.99999934}
   m_LocalPosition: {x: -0.0285, y: -0.0089, z: 0}
-  m_LocalScale: {x: 0.049127515, y: 0.05938012, z: 1}
+  m_LocalScale: {x: 0.04912752, y: 0.05938012, z: 1}
   m_Children: []
   m_Father: {fileID: 1788581345}
   m_RootOrder: 0
@@ -51141,6 +52276,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2077852669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51362,7 +52499,7 @@ Transform:
   m_Children:
   - {fileID: 1877587936}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 199
+  m_RootOrder: 195
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2087401254
 MonoBehaviour:
@@ -51392,6 +52529,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2087401255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51479,6 +52618,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2087682939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51700,7 +52841,7 @@ Transform:
   m_Children:
   - {fileID: 2123650161}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 183
+  m_RootOrder: 179
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2098437879
 MonoBehaviour:
@@ -51730,6 +52871,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2098437880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51816,6 +52959,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 1
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2101880409
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51873,7 +53018,7 @@ Transform:
   m_Children:
   - {fileID: 439504094}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 161
+  m_RootOrder: 159
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2101907248
 MonoBehaviour:
@@ -51903,6 +53048,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2101907249
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51990,6 +53137,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2105325456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52047,7 +53196,7 @@ Transform:
   m_Children:
   - {fileID: 387803638}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 133
+  m_RootOrder: 132
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2107371299
 MonoBehaviour:
@@ -52077,6 +53226,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2107371300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52164,6 +53315,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2116577893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52203,6 +53356,7 @@ GameObject:
   - component: {fileID: 2117798749}
   - component: {fileID: 2117798748}
   - component: {fileID: 2117798747}
+  - component: {fileID: 2117798752}
   m_Layer: 0
   m_Name: blue
   m_TagString: Enemy
@@ -52301,7 +53455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   currentNode: {fileID: 0}
-  speed: 3
+  speed: 2
   direction: 
   lastMovingDirection: 
   canWarp: 1
@@ -52343,6 +53497,11 @@ MonoBehaviour:
   - {fileID: 1197762396}
   scatterNodesindex: 0
   leftHomeBefor: 0
+  isVisible: 1
+  ghostSprite: {fileID: 0}
+  eyeeSprite: {fileID: 445577101}
+  animator: {fileID: 0}
+  color: {r: 0.019607844, g: 0.007843138, b: 0.98039216, a: 1}
 --- !u!4 &2117798751
 Transform:
   m_ObjectHideFlags: 0
@@ -52351,13 +53510,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117798746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.57, y: 0.304, z: -62.606186}
+  m_LocalPosition: {x: 4.649, y: 0.276, z: -62.606186}
   m_LocalScale: {x: 0.16, y: 0.16, z: 1}
   m_Children:
   - {fileID: 445577100}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2117798752
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117798746}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61eee69f9bca02641918d70aefa7c303, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2120001690
 GameObject:
   m_ObjectHideFlags: 0
@@ -52419,6 +53597,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2120001693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52722,7 +53902,7 @@ Transform:
   m_Children:
   - {fileID: 2072595450}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 162
+  m_RootOrder: 160
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2129277422
 MonoBehaviour:
@@ -52752,6 +53932,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2129277423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52809,7 +53991,7 @@ Transform:
   m_Children:
   - {fileID: 1571673924}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 132
+  m_RootOrder: 131
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2132164112
 MonoBehaviour:
@@ -52839,6 +54021,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2132164113
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52926,6 +54110,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2136604731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52983,7 +54169,7 @@ Transform:
   m_Children:
   - {fileID: 1496269825}
   m_Father: {fileID: 1391294755}
-  m_RootOrder: 226
+  m_RootOrder: 222
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2140377561
 MonoBehaviour:
@@ -53013,6 +54199,8 @@ MonoBehaviour:
   pelletSprite: {fileID: 0}
   gameManager: {fileID: 0}
   isSideNodes: 0
+  isPowerPellet: 0
+  powerPelletBlinkingTimer: 0
 --- !u!61 &2140377562
 BoxCollider2D:
   m_ObjectHideFlags: 0
